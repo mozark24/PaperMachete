@@ -19,7 +19,7 @@ ANALYSIS = join(MACHETE, "analysis")
 MAX_ACTIVE = 25     # migration knob: max number of migration workers running at once
 MAX_BATCHES = 1000000000   # migration knob: max number of rows to execute in one transation
 
-MENU1 = "[1] Analyze a binary file"
+MENU1 = "[1] Analyze a binary file (headless)"
 MENU2 = "[2] Migrate a JSON file into Grakn"
 MENU3 = "[3] Run all CWE queries"
 MENU4 = "[4] Clean and restart Grakn"
