@@ -48,14 +48,16 @@ For basic use, run the `paper_machete.py` script and follow the prompts. For mor
 Typically you'll start with option `[1]` and work your way down to option `[3]`. If you run into any issues with Grakn use option `[4]` to reset Grakn to a clean state and try again.
 ```
 ... banner ...
-[1] Analyze a binary file
+[1] Analyze a binary file (headless)
 [2] Migrate a JSON file into Grakn
 [3] Run all CWE queries
 [4] Clean and restart Grakn
 [5] Quit
 ```
 
-Option `[1]` lists all executable files in the `/analysis` directory. So place any executables you want to analyze in `/analysis`. This option will run `pmanalyze.py` and generate a JSON file in the `/analysis` directory.
+Option `[1]` lists all executable files in the `/analysis` directory. So place any executables you want to analyze in `/analysis`. This option will run `pmanalyze.py` and generate a JSON file in the `/analysis` directory with a commercial version of Binary Ninja.  
+
+To execute with a personal license version (non-headless), place `pmanalyze_binja.py` into the plugins directory, open the executable in Binary Ninja, and run the plugin labeled `Paper Machete`.  The json file will be created in the `/tmp` directory.  Move the json file into your `/analysis` directory and continue the Grakn import process.
 
 Once you've analyzed files with `[1]` and produced resulting JSON files, they will appear as a choice in option `[2]`. Selecting a JSON file in option `[2]` will migrate the data into Grakn.
 
